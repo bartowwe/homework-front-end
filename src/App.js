@@ -112,8 +112,8 @@ class App extends Component {
       {this.searchBar()}
       {
         this.state.gifs.map((gif, i)=> {
-          return <div className="Gif">
-                    <img src={gif.images.fixed_height.url} key={i} onClick={() => this.showDiv(gif.id)}/>
+          return <div className="Gif" key={i}>
+                    <img src={gif.images.fixed_height.url} onClick={() => this.showDiv(gif.id)}/>
                     <div className="Hidden-info" id={gif.id}>
                       <span><b>Title:</b> {gif.title}</span> 
                       {this.showUser(gif)}
